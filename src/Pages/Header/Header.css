@@ -1,0 +1,13 @@
+.menu .links a{
+    text-decoration: none;
+    color: white;
+    margin-left: 30px;
+    padding: 5px; 
+ 
+
+}
+.header .links a:hover{
+    background-color: teal;
+   padding: 5px; 
+
+}
