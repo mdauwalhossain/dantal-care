@@ -5,11 +5,11 @@ import './Header.css'
 
 const Header = () => {
     return (
-        <div className="menu">
+        <div className="menu-bar">
              <Navbar bg="dark" variant="dark">
                 <Container>
-                <Navbar.Brand to="/home">Dental Care</Navbar.Brand>
-                <Nav className="me-auto , mx-3">
+                <Navbar.Brand className="bg-success px-2" to="/home">Dental Care</Navbar.Brand>
+                <Nav className="links me-auto , mx-3">
                     <NavLink to="/home" style={{ textDecoration: 'none', color:"white"}}>Home</NavLink>
                     <NavLink to="/details" style={{ textDecoration: 'none', color:"white" }}>Details</NavLink>
                     <NavLink to="/about" style={{ textDecoration: 'none', color:"white" }}>About Us</NavLink>
@@ -18,9 +18,6 @@ const Header = () => {
                 </Nav>
                 </Container>
             </Navbar>
-
-
-           
         </div>
     );
 };

@@ -14,7 +14,6 @@ const Home = () => {
     }, [])
     return (
         <div className="">
-
            
         <div>
             <Carousel>
@@ -57,28 +56,20 @@ const Home = () => {
             </Carousel>
             </div>
             
-            
-            <h2>Take a Service</h2>
+            <h2 className="mt-5 bg-info">Take a Service</h2>
 
-            
-            
             <div>
                 <div className="show-cards row">
                     <Row xs={1} md={2} className="g-4">
                         {
-                        infos.slice(0,4).map(info => <Body  
+                        infos.slice(0,6).map(info => <Body  
                             key= {info._id}
                             info={info}                                                    
                             ></Body>)
-                        } 
-                            
+                        }                            
                     </Row>
                 </div>
             </div>
-
-            
-           
-
         </div>
     );
 };

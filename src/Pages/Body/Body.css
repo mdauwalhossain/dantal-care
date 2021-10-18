@@ -1,0 +1,7 @@
+.card button{
+    background-color: lightslategray;
+}
+
+.card .sub button{
+    background-color: lime;
+}

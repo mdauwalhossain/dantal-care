@@ -1,4 +1,4 @@
-.menu #NavLink{
+.menu-bar .links a{
     text-decoration: none;
     color: white;
     margin-left: 30px;
@@ -6,7 +6,7 @@
  
 
 }
-.header .links a:hover{
+.menu-bar .links a:hover{
     background-color: teal;
    padding: 5px; 
 
