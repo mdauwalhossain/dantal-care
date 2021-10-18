@@ -7,10 +7,15 @@ import Header from './Pages/Header/Header';
 import Detail from './Pages/Detail/Detail';
 import AboutUs from './Pages/AboutUs/About';
 import ContactUs from './Pages/ContactUs/Contact';
+import initializeAuthentication from './Firebase/firebase.init';
+import Login from './Login/Login';
+
+
+initializeAuthentication();
 
 function App() {
   return (
-    <div className="App">     
+    <div className="App"> 
       <Router>
         <Header></Header>
 
@@ -21,7 +26,7 @@ function App() {
               <Route path="/home">
                 <Home>Home</Home>
               </Route>
-              <Route path="/detail">
+              <Route path="/details">
                 <Detail>Detail</Detail>
               </Route>
               <Route path="/about">
@@ -29,7 +34,11 @@ function App() {
               </Route>
               <Route path="/contact">
                 <ContactUs>Contact Us</ContactUs>
-              </Route>              
+              </Route>  
+              <Route path="/login">
+              <Login>Login</Login>
+              </Route>
+         
               <Route path="*">
                 <NotFound></NotFound>
               </Route>
