@@ -22,8 +22,8 @@ const Header = () => {
                    
                   
                   { 
-                  user?
-                  <button onClick={logOut}>Log out</button>
+                  user.displayName?
+                  <button className="bg-info" onClick={logOut}>Log out</button>
                   :
                   <NavLink to="/login" style={{ textDecoration: 'none', color:"white",  }}>Login</NavLink>}
 
