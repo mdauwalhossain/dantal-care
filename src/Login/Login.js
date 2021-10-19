@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 
  const Login = () => {
@@ -32,10 +33,12 @@ import React, { useState } from "react";
 
   return (
     <div className="">
-      <div className="row ">
-        <div className="col-md-6">
+      <div className=" ">
+        
+        <div className="col-md-12">
           <div>
             <div className="form-input mt-5">
+            <h2>Login</h2>
               <input
                 // onChange={hanldeEmail}
                 className="mt-2 p-2"
@@ -67,11 +70,12 @@ import React, { useState } from "react";
                 // onClick={handleGoogleLogin}
                 className="btn btn-warning m-2"
               >
-                google sign in
+                Google sign in
               </button>
               <button className="btn btn-dark m-2">
                 Github sign in
               </button>
+              <p>New in Dental Care?? <Link to="/register">Follow the steps</Link> </p>
             </div>
           </div>
         </div>

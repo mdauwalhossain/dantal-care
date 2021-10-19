@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Row } from 'react-bootstrap';
 import Data from './Data/Data';
+import './Detail.css'
 
 const Detail = () => {
     const [probs, setProbs] = useState([]);

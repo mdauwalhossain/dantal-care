@@ -9,6 +9,7 @@ import AboutUs from './Pages/AboutUs/About';
 import ContactUs from './Pages/ContactUs/Contact';
 import initializeAuthentication from './Firebase/firebase.init';
 import Login from './Login/Login';
+import Register from './Pages/Register/Register';
 
 
 initializeAuthentication();
@@ -37,6 +38,9 @@ function App() {
               </Route>  
               <Route path="/login">
               <Login>Login</Login>
+              </Route>
+              <Route path="/register">
+              <Register></Register>
               </Route>
          
               <Route path="*">
