@@ -10,6 +10,7 @@ import ContactUs from './Pages/ContactUs/Contact';
 import initializeAuthentication from './Firebase/firebase.init';
 import Login from './Login/Login';
 import Register from './Pages/Register/Register';
+import AuthProvider from './Context/AuthProvider';
 
 
 initializeAuthentication();
@@ -17,7 +18,7 @@ initializeAuthentication();
 function App() {
   return (
     <div className="App"> 
-      <Router>
+     <Router>
         <Header></Header>
 
           <Switch>

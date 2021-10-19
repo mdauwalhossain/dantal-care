@@ -1,36 +1,13 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import { Link } from "react-router-dom";
+// import useAuth from "../hooks/useAuth";
+import useFirebase from "../hooks/useFirebase";
 
 
  const Login = () => {
-//   const {
-//     handleGoogleLogin,
-//     user,
-    // handleGithubLogin,
-//     handleUserRegister,
-//     handleUserLogin,
-//   } = useFirebase();
-
-  // const [email, setEmail] = useState("");
-  // const [password, setPassword] = useState("");
-
-  // const hanldeEmail = (e) => {
-  //   setEmail(e.target.value);
-  // };
-  // const hanldePassword = (e) => {
-  //   setPassword(e.target.value);
-  //  };
-
-  // console.log(email, password);
-
-  // const handleRegister = () => {
-  //   handleUserRegister(email, password);
-  // };
-
-  // const handleLogin = () => {
-  //   handleUserLogin(email, password);
-  // };
-
+  //  const { signInUsingGoogle} = useAuth();
+  const { signInUsingGoogle} = useFirebase();
+  // const {out, setOut} = useState();
   return (
     <div className="">
       <div className=" ">
@@ -39,23 +16,20 @@ import { Link } from "react-router-dom";
           <div>
             <div className="form-input mt-5">
             <h2>Login</h2>
-              <input
-                // onChange={hanldeEmail}
+              <input              
                 className="mt-2 p-2"
                 type="email"
                 placeholder="Email"
               />
               <br />
               <input
-                // onChange={hanldePassword}
                 className="mt-2 p-2"
                 type="password"
                 placeholder="Password"
               />
               <br />
               <div className="login-regiater-btn mt-4">
-                <button
-                  // onClick={handleRegister}
+                <button                 
                   className="btn btn-primary me-1"
                 >
                   Register
@@ -67,8 +41,8 @@ import { Link } from "react-router-dom";
             </div>
             <div className="login-btn mt-4">
               <button
-                // onClick={handleGoogleLogin}
-                className="btn btn-warning m-2"
+                onClick={signInUsingGoogle}
+                className="btn btn-info m-2"
               >
                 Google sign in
               </button>
