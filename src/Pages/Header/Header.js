@@ -8,14 +8,14 @@ import './Header.css'
 const Header = () => {
     const {user, logOut} =useFirebase();
     // const {user, logOut} = useAuth();
-    console.log(useFirebase);
+    // console.log(useFirebase);
   
     return (
         <div className="menu-bar">
              <Navbar bg="dark" variant="dark">
                 <Container>
                 <Navbar.Brand className="bg-success px-2" to="/home">Dental Care</Navbar.Brand>
-                <Nav className="links me-auto , mx-3">
+                <Nav  sticky="top" className="links me-auto , mx-3">
                     <NavLink to="/home" style={{ textDecoration: 'none', color:"white"}}>Home</NavLink>
                     <NavLink to="/details" style={{ textDecoration: 'none', color:"white" }}>Details</NavLink>
                     <NavLink to="/about" style={{ textDecoration: 'none', color:"white" }}>About Us</NavLink>

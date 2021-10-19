@@ -1,27 +1,26 @@
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth } from "firebase/auth";
 import { useState } from "react";
-// import React, { useState } from "react";
 import { Link } from "react-router-dom";
-// import useAuth from "../hooks/useAuth";
 import useFirebase from "../hooks/useFirebase";
+
 
 
  const Login = () => {
   const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  //  const { signInUsingGoogle} = useAuth();
-  const { signInUsingGoogle} = useFirebase();
-  // const {out, setOut} = useState();
+  const [password, setPassword] = useState(''); 
+  const { signInUsingGoogle} = useFirebase(); 
   const {emaill} = useFirebase();
 
   const auth = getAuth();
 
+  
   const handleEmailChange = e => {
     setEmail(e.target.value);
 }
 
 const handlePasswordChange = e =>{
-    setPassword('passsssssssss')
+    setPassword(e.target.value)
+
 }
 
 

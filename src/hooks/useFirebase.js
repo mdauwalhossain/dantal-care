@@ -1,12 +1,13 @@
 import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut, createUserWithEmailAndPassword } from "firebase/auth";
 import { useEffect, useState } from "react"
+import { useHistory } from "react-router";
 import initializeAuthentication from "../Firebase/firebase.init";
 
 initializeAuthentication();
 
 const useFirebase = () =>{
     const [user, setUser] = useState({});
-
+    const history = useHistory();
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();
 
@@ -23,6 +24,8 @@ const useFirebase = () =>{
         .then(result => {
             const user = result.user;
             console.log(user)
+            history.push('/details')
+            
         })
 
         

@@ -1,4 +1,4 @@
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth,} from "firebase/auth";
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 // import '../../hooks/useFirebase'
@@ -16,7 +16,7 @@ const Register = () => {
     }
 
     const handlePasswordChange = e =>{
-        setPassword('passsssssssss')
+        setPassword('')
     }
 
     const handleRegistration = (e) =>{
