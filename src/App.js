@@ -11,6 +11,7 @@ import initializeAuthentication from './Firebase/firebase.init';
 import Login from './Login/Login';
 import Register from './Pages/Register/Register';
 import AuthProvider from './Context/AuthProvider';
+import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 
 
 initializeAuthentication();
@@ -18,7 +19,9 @@ initializeAuthentication();
 function App() {
   return (
     <div className="App"> 
-     <Router>
+
+      <AuthProvider>
+      <Router>
         <Header></Header>
 
           <Switch>
@@ -28,9 +31,9 @@ function App() {
               <Route path="/home">
                 <Home>Home</Home>
               </Route>
-              <Route path="/details">
+              <PrivateRoute path="/details">
                 <Detail>Detail</Detail>
-              </Route>
+              </PrivateRoute>
               <Route path="/about">
                 <AboutUs>About Us</AboutUs>
               </Route>
@@ -51,6 +54,8 @@ function App() {
 
         <Footer></Footer>
       </Router>
+      </AuthProvider>
+
     </div>
   );
 }

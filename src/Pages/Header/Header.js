@@ -8,6 +8,7 @@ import './Header.css'
 const Header = () => {
     const {user, logOut} =useFirebase();
     // const {user, logOut} = useAuth();
+    console.log(useFirebase);
   
     return (
         <div className="menu-bar">
@@ -20,7 +21,6 @@ const Header = () => {
                     <NavLink to="/about" style={{ textDecoration: 'none', color:"white" }}>About Us</NavLink>
                     <NavLink to="/contact" style={{ textDecoration: 'none', color:"white",  }}>Contact Us</NavLink>
                    
-                  
                   { 
                   user.displayName?
                   <button className="bg-info" onClick={logOut}>Log out</button>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Body = (props) => {
     const {name, price, picture, details} = props.info;
@@ -13,7 +14,7 @@ const Body = (props) => {
                     <Card.Text className="">
                         <h6>Price: {price} (Yearly)</h6>
                         <p><small>{details}</small></p>
-                        <button className="bg-warning">Explore More</button>
+                        <Link to="/details" style={{textDecoration: 'none' , px: '5'}} className="bg-warning">Explore More</Link>
                     </Card.Text>
                     </Card.Body>
                 </Card>

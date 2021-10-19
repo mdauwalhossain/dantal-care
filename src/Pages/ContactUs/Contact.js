@@ -16,8 +16,11 @@ const Contact = () => {
                
             </p>
             <div className="form">
+                <h6>Enter your Email</h6>
                 <input type="email" name="email" placeholder="Email Here" id="" /> <br />
+                <h6>Enter your Password</h6>
                 <input type="password" name="password" placeholder="Password" id="" /> <br />
+                <h6>Send your message</h6>
                 <textarea rows="3" cols="30" name="comment" form="usrform" placeholder="Message Here">
                 </textarea> <br />
                 <input type="submit" value="Submit" />
