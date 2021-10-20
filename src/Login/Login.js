@@ -55,7 +55,7 @@ const handlePasswordChange = e =>{
               <br />
               <div className="login-regiater-btn mt-4">
                
-                <button className="btn btn-primary ms-1">
+                <button className="btn btn-primary text-warning ms-1">
                   Login
                 </button>
               </div>
@@ -64,7 +64,7 @@ const handlePasswordChange = e =>{
             <div className="login-btn mt-4">
               <button
                 onClick={signInUsingGoogle}
-                className="btn btn-info m-2"
+                className="btn btn-warning m-2"
               >
                 Google sign in
               </button>

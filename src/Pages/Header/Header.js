@@ -15,7 +15,7 @@ const Header = () => {
              <Navbar bg="dark" variant="dark">
                 <Container>
                 <Navbar.Brand className="bg-success px-2" to="/home">Dental Care</Navbar.Brand>
-                <Nav  sticky="top" className="links me-auto , mx-3 ">
+                <Nav  sticky="top" className="links me-center mx-3">
                     <NavLink to="/home" style={{ textDecoration: 'none', color:"white"}}>Home</NavLink>
                     <NavLink to="/details" style={{ textDecoration: 'none', color:"white" }}>Details</NavLink>
                     <NavLink to="/about" style={{ textDecoration: 'none', color:"white" }}>About Us</NavLink>
