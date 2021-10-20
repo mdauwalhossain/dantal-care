@@ -7,5 +7,5 @@ Live website link: [Dental Care](https://dental-care-2e394.web.app).
 * Root Cannel
 * Filling
 * Cleaning
-4. Changing
-5. Caping
+* Changing
+* Caping
