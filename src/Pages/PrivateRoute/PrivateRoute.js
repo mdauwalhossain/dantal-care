@@ -4,6 +4,8 @@ import useAuth from '../../hooks/useAuth';
 
 const PrivateRoute = ({children, ...rest}) => {
     const {user}= useAuth();
+
+  
     return (
         <Route
           {...rest}
@@ -14,7 +16,7 @@ const PrivateRoute = ({children, ...rest}) => {
               <Redirect
                 to={{
                   pathname: "/login",
-                  state: { from: location }
+                  state:  {from: location}
                 }}
               />
             )

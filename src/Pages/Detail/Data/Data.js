@@ -10,12 +10,13 @@ const Data = (props) => {
                     {Array.from({ length: 1 }).map((_, idx) => (
                         <Col>
                         <Card className="rounded mx-auto d-block bg-secondary">
-                            <Card.Img className="text-center" variant="top" src={picture} />
+                            <Card.Img className="text-center rounded" variant="top" src={picture} />
                             <Card.Body>
                             <Card.Title className="text-light">Course: {name}</Card.Title>
                             <Card.Text>
                                 <span className="">{details}</span>
                                 <h6 className="text-warning">Price: {price}</h6>
+                                <button className="border border-3 px-3 border-info bg-warning rounded-pill">Book Now</button>
                             </Card.Text>
                             </Card.Body>
                         </Card>

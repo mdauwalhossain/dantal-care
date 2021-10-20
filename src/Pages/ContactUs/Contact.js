@@ -4,6 +4,7 @@ import './Contact.css'
 const Contact = () => {
     return (
         <div className="contact-form">
+            <br />
                   <h1 className="text-danger">Contact with us</h1>
             <div className="">
                 {/* <div>
@@ -35,9 +36,12 @@ const Contact = () => {
                 <textarea rows="3" cols="30" name="comment" form="usrform" placeholder="Express your opinion">
                 </textarea> <br />
                 <input className="bg-warning" type="submit" value="Submit" />
+                <br /><br />
             </div>
         </div>
+    
     );
+    
 };
 
 export default Contact;

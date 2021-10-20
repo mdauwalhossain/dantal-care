@@ -11,10 +11,11 @@ const useFirebase = () =>{
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();
 
-    const signInUsingGoogle = () =>{
+    const signInUsingGoogle = (history, from) =>{
         signInWithPopup(auth, googleProvider)
         .then(result => {
             console.log(result.user);
+            history.push(from)
         })
     }
 
@@ -44,6 +45,9 @@ const useFirebase = () =>{
               
               setUser(user)
              
+            }
+            else{
+                setUser({})
             }
           });
     },[])

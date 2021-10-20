@@ -1,8 +1,8 @@
-import { getAuth } from "firebase/auth";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import useFirebase from "../hooks/useFirebase";
 import './Login.css'
+import { useHistory, useLocation } from "react-router";
 
 
 
@@ -12,7 +12,7 @@ import './Login.css'
   const { signInUsingGoogle} = useFirebase(); 
   const {emaill} = useFirebase();
 
-  const auth = getAuth();
+  // const auth = getAuth();
 
   
   const handleEmailChange = e => {
@@ -24,14 +24,19 @@ const handlePasswordChange = e =>{
 
 }
 
-
   const handleLogIn = (e) =>{
     e.preventDefault();
    emaill(email, password)
   }
+
+  let history = useHistory();
+    let location = useLocation();
+    let { from } = location.state || { from: { pathname: "/" } };
+   
+
   return (
     <div className="log">
-      <h1>Wanna something more...</h1>
+      <h1 className="text-success">Wanna something more...</h1>
       <div className=" ">
         
         <div className="col-md-12">
@@ -55,7 +60,7 @@ const handlePasswordChange = e =>{
               <br />
               <div className="login-regiater-btn mt-4">
                
-                <button className="btn btn-primary text-warning ms-1">
+                <button className="btn btn-primary text-light ms-1">
                   Login
                 </button>
               </div>
@@ -63,13 +68,14 @@ const handlePasswordChange = e =>{
            </form>
             <div className="login-btn mt-4">
               <button
-                onClick={signInUsingGoogle}
+                onClick={
+                ()=>signInUsingGoogle(history, from) }
                 className="btn btn-warning m-2"
               >
                 Google sign in
               </button>
              
-              <p>New in Dental Care?? <Link to="/register" style={{ textDecoration: 'none', color:"red"}}>Register Here</Link> </p>
+              <p className="">New in Dental Care?? <Link to="/register" style={{ textDecoration: 'none', color:"red"}}>Register Here</Link> </p>
             </div>
           </div>
         </div>

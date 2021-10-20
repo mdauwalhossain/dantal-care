@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import useFirebase from "../../hooks/useFirebase";
 import './Register.css'
+import { useHistory, useLocation } from "react-router";
 // import '../../hooks/useFirebase'
 // import useFirebase from "../../hooks/useFirebase";
 
@@ -11,6 +12,7 @@ const Register = () => {
     const [password, setPassword] = useState('');
     const {emaill} = useFirebase();
     const {signInUsingGoogle} = useFirebase();
+    
 
     const auth = getAuth();
 
@@ -26,6 +28,11 @@ const Register = () => {
         e.preventDefault();
        emaill(email, password)    
     }
+
+    let history = useHistory();
+    let location = useLocation();
+    let { from } = location.state || { from: { pathname: "/" } };
+
     return (
         <div className="reg">
             <div>
@@ -43,7 +50,8 @@ const Register = () => {
                     <input className="btn btn-success ms-1" type="Submit" value="Submit" />
                 </form>
                 <p>Already have an account? <Link to="/login" style={{ textDecoration: 'none', color:"red"}}>Login</Link> </p>
-                <button onClick={signInUsingGoogle} className="btn btn-primary m-2">Google Sign in</button>
+                <button onClick={
+                    () => signInUsingGoogle(history, from)} className="btn btn-primary m-2">Google Sign in</button>
             </div>
             <br /><br /><br />
         </div>
