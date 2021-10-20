@@ -4,18 +4,18 @@ import './Data.css'
 const Data = (props) => {
     const {name,picture, details, price} = props.data;
     return (
-        <div>            
-            <div className="detail">
+        <div className="detail bg-success">            
+            <div>
                 <Row xs={1} md={2} className="">
                     {Array.from({ length: 1 }).map((_, idx) => (
                         <Col>
-                        <Card className="rounded mx-auto d-block">
+                        <Card className="rounded mx-auto d-block bg-secondary">
                             <Card.Img className="text-center" variant="top" src={picture} />
                             <Card.Body>
-                            <Card.Title>Course: {name}</Card.Title>
+                            <Card.Title className="text-light">Course: {name}</Card.Title>
                             <Card.Text>
-                                {details}
-                                <p>Price: {price}</p>
+                                <span className="">{details}</span>
+                                <h6 className="text-warning">Price: {price}</h6>
                             </Card.Text>
                             </Card.Body>
                         </Card>

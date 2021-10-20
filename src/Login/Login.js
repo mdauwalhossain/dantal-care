@@ -2,6 +2,7 @@ import { getAuth } from "firebase/auth";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import useFirebase from "../hooks/useFirebase";
+import './Login.css'
 
 
 
@@ -29,7 +30,8 @@ const handlePasswordChange = e =>{
    emaill(email, password)
   }
   return (
-    <div className="">
+    <div className="log">
+      <h1>Wanna something more...</h1>
       <div className=" ">
         
         <div className="col-md-12">
@@ -53,7 +55,7 @@ const handlePasswordChange = e =>{
               <br />
               <div className="login-regiater-btn mt-4">
                
-                <button className="btn btn-success ms-1">
+                <button className="btn btn-primary ms-1">
                   Login
                 </button>
               </div>
@@ -67,12 +69,13 @@ const handlePasswordChange = e =>{
                 Google sign in
               </button>
              
-              <p>New in Dental Care?? <Link to="/register">Follow the steps</Link> </p>
+              <p>New in Dental Care?? <Link to="/register" style={{ textDecoration: 'none', color:"red"}}>Register Here</Link> </p>
             </div>
           </div>
         </div>
        
       </div>
+      <br />
     </div>
   );
  };

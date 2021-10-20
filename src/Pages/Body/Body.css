@@ -1,7 +1,9 @@
-.card button{
+.card{
     background-color: lightslategray;
 }
 
-.card .sub button{
-    background-color: lime;
+.card img{
+    border-radius: 10px;
+    height: 50%;
 }
+

@@ -13,7 +13,7 @@ const Home = () => {
         .then(data => setInfos(data))
     }, [])
     return (
-        <div className="">
+        <div className="home">
            
         <div>
             <Carousel>
@@ -24,7 +24,7 @@ const Home = () => {
                     src="https://cdn-caimh.nitrocdn.com/yYKLjJHXYJzwvfGYwbksgHLtEXQTAPwb/assets/static/optimized/wp-content/uploads/2019/05/8f440c4ce0b0eadf3f5dba838c9e10e9.Order-4411-_-Image-7-750x400.jpg"
                     alt="First slide"
                     />
-                    <Carousel.Caption>
+                    <Carousel.Caption className="text-info bg-dark">
                     <h3>Child Care</h3>
                     <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                     </Carousel.Caption>
@@ -36,7 +36,7 @@ const Home = () => {
                     src="https://images.squarespace-cdn.com/content/v1/57e01f4c2e69cf3a18c52ac1/1478019001930-XMM5QRUHYRC67INH0JW4/Tooth+-+01.jpg"
                     alt="Second slide"
                     />
-                    <Carousel.Caption>
+                    <Carousel.Caption className="text-light bg-dark">
                     <h3>Baby Care</h3>
                     <p>Whatever the reason, dental office names are on your mind.</p>
                     </Carousel.Caption>
@@ -48,7 +48,7 @@ const Home = () => {
                     src="https://cdn.shoutlo.com/uploads/media/top-5-dental-clinics-in-chandigarh_1500376159.jpeg"
                     alt="Third slide"
                     />
-                    <Carousel.Caption>
+                    <Carousel.Caption className="text-warning bg-dark">
                     <h3>Adult Care</h3>
                     <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
                     </Carousel.Caption>
@@ -56,7 +56,7 @@ const Home = () => {
             </Carousel>
             </div>
             
-            <h2 className="mt-5 bg-info">Take a Service</h2>
+            <h2 className="mt-5 text-light bg-dark">Take a Service</h2>
 
             <div>
                 <div className="show-cards row">

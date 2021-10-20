@@ -1,4 +1,8 @@
 .contact-form{
-    margin-bottom: 10px;
-    background-color: darkcyan;
+    background-color:skyblue;
+}
+
+.con{
+  display: flex;
+  text-align: center;
 }
