@@ -31,9 +31,11 @@ function App() {
               <Route path="/home">
                 <Home>Home</Home>
               </Route>
+
               <PrivateRoute path="/details">
                 <Detail>Detail</Detail>
               </PrivateRoute>
+              
               <Route path="/about">
                 <AboutUs>About Us</AboutUs>
               </Route>

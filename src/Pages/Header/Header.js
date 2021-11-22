@@ -12,7 +12,7 @@ const Header = () => {
   
     return (
         <div className="menu-bar">
-             <Navbar bg="dark" variant="dark">
+            <Navbar bg="dark" variant="dark">
                 <Container>
                 <Navbar.Brand className="bg-success px-2" to="/home">Dental Care</Navbar.Brand>
                 <Nav  sticky="top" className="links me-center mx-3">
